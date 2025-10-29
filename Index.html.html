@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Excelsiora - Digital Creative Agency</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3c10a2",
+              "background-light": "#f6f6f8",
+              "background-dark": "#161121",
+            },
+            fontFamily: {
+              display: ["Spline Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+      <!-- ===== Navigation Bar ===== -->
+      <header class="w-full fixed top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-primary/10">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+          <!-- Logo -->
+          <a href="index.html" class="text-white text-2xl font-extrabold tracking-tight">
+            Excelsiora
+          </a>
+
+          <!-- Nav Links -->
+          <ul class="hidden md:flex space-x-8 text-white font-semibold">
+            <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+            <li><a href="offering.html" class="hover:text-primary transition-colors">Offerings</a></li>
+            <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+            <li><a href="testimonial.html" class="hover:text-primary transition-colors">Testimonials</a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="block md:hidden text-white focus:outline-none"
+          >
+            ☰
+          </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden flex-col bg-background-dark md:hidden text-white px-6 pb-4 space-y-2"
+        >
+          <a href="index.html" class="hover:text-primary block">Home</a>
+          <a href="about.html" class="hover:text-primary block">About</a>
+          <a href="offering.html" class="hover:text-primary block">Offerings</a>
+          <a href="portfolio.html" class="hover:text-primary block">Portfolio</a>
+          <a href="testimonial.html" class="hover:text-primary block">Testimonials</a>
+          <a href="contact.html" class="hover:text-primary block">Contact</a>
+        </div>
+      </header>
+
+      <!-- ===== Hero Section ===== -->
+      <main
+        class="flex flex-col justify-center items-center text-center min-h-screen gap-6 bg-cover bg-center bg-no-repeat p-6"
+        style='background-image: linear-gradient(rgba(10, 4, 60, 0.7), rgba(22, 17, 33, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgHEs-ZK0sAd72_Qlv3tiTbhtzvBDwz_ytN8cJCXV2N-vEvqTbaHX5BpYCSPEBxjwxV_z70P3iMRLSpNHoMwiG6PXZMY567kbquPDvn2XO5GMJ3RyQDrotxnvwqoQUoXvra1EXoRy2SWMena3unkQ75weWENxicT_2YY4NWeduZtvg0wIJkLbgCOXrnvfLT6pZ3ZH3A3GEo2EybP2StvfFVAhb1KbwyrZaL4WEbZVgBGiAqkn_uf1B_aXYPkaNWiKgO9R4cHqMEMQ");'
+      >
+        <div class="max-w-2xl mt-20 md:mt-32">
+          <h1
+            class="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight"
+          >
+            Building Digital Experiences That Inspire
+          </h1>
+          <p class="text-slate-300 mt-4 text-lg leading-relaxed">
+            Excelsiora gives your brand the identity it deserves — from web
+            design to video editing, branding, marketing, graphics design, and
+            animations.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-4 mt-6">
+          <a
+            href="contact.html"
+            class="px-6 h-12 flex items-center justify-center bg-primary text-white font-bold rounded-lg hover:scale-105 transition-transform"
+            >Start Your Project</a
+          >
+          <a
+            href="portfolio.html"
+            class="px-6 h-12 flex items-center justify-center border-2 border-primary text-white font-bold rounded-lg hover:bg-primary/30 transition-colors"
+            >View Portfolio</a
+          >
+        </div>
+      </main>
+    </div>
+
+    <!-- ===== Mobile Menu Script ===== -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

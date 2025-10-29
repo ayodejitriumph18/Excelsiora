@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Excelsiora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3c10a2",
+              "background-light": "#f6f6f8",
+              "background-dark": "#161121",
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+
+  </head>
+  <header class="w-full fixed top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-primary/10">
+  <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+    <!-- Logo -->
+    <a href="index.html" class="text-white text-2xl font-extrabold tracking-tight">
+      Excelsiora
+    </a>
+
+    <!-- Nav Links -->
+    <ul class="hidden md:flex space-x-8 text-white font-semibold">
+      <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+      <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+      <li><a href="offerings.html" class="hover:text-primary transition-colors">Offerings</a></li>
+      <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+      <li><a href="testimonials.html" class="hover:text-primary transition-colors">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col bg-background-dark md:hidden text-white px-6 pb-4 space-y-2">
+    <a href="index.html" class="hover:text-primary block">Home</a>
+    <a href="about.html" class="hover:text-primary block">About</a>
+    <a href="offerings.html" class="hover:text-primary block">Offerings</a>
+    <a href="portfolio.html" class="hover:text-primary block">Portfolio</a>
+    <a href="testimonials.html" class="hover:text-primary block">Testimonials</a>
+    <a href="contact.html" class="hover:text-primary block">Contact</a>
+  </div>
+</header>
+
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">About Excelsiora</h2>
+</div>
+<!-- Main Content -->
+<main class="flex flex-col flex-1 px-4 py-6 @container">
+<div class="flex flex-col gap-8 @[480px]:flex-row @[480px]:items-center">
+<!-- Image Column -->
+<div class="flex w-full @[480px]:w-1/2">
+<div class="w-full gap-1 overflow-hidden aspect-[3/2] flex rounded-xl">
+<div class="w-full bg-center bg-no-repeat bg-cover aspect-auto flex-1" data-alt="Abstract purple and blue fluid shapes representing creativity and innovation." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdZCkZLS4Y9gS2lAO99EkbUCOL7l8jqLQ7Oh2Qn9b2h-s_Iijbcm7l-3f2EqJ3r2pjdB8a-0oQkuVXD-C_tCrSeLZ60MdvV0Xc2KsmmjUls2jCIm99_HTrzxKm6uI6BUN1vAXaZuHFgOHlYNzft4cBbkHl2FGdIbm6Bq1olVwfYOdwNeSMCs-SrIw2L-FKvlkrxlPSiaKSMVWRHnfYUjv_QTGsqo2cMnN0sfZ05K7SxIlZMS9clWxd9x8ScnRP84gL6xUOI0j2Ugg");'></div>
+</div>
+</div>
+<!-- Text Column -->
+<div class="flex flex-col w-full @[480px]:w-1/2">
+<!-- HeadlineText -->
+<h1 class="text-slate-900 dark:text-white tracking-light text-[32px] font-bold leading-tight text-left pb-3">Bringing Ideas to Life</h1>
+<!-- BodyText -->
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-normal pb-3 pt-1">
+                        We are a creative technology brand focused on bringing ideas to life through design, storytelling, and innovation. Excelsiora helps individuals and businesses grow through digital creativity and identity development.
+                    </p>
+</div>
+</div>
+<!-- SingleButton CTA -->
+<div class="flex px-0 pt-8 pb-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Contact Us</span>
+</button>
+</div>
+</main>
+</div>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+
+</body></html>

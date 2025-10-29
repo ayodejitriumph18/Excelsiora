@@ -49,6 +49,39 @@
     }
   </style>
   </head>
+  <header class="w-full fixed top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-primary/10">
+  <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+    <!-- Logo -->
+    <a href="index.html" class="text-white text-2xl font-extrabold tracking-tight">
+      Excelsiora
+    </a>
+
+    <!-- Nav Links -->
+    <ul class="hidden md:flex space-x-8 text-white font-semibold">
+      <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+      <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+      <li><a href="offerings.html" class="hover:text-primary transition-colors">Offerings</a></li>
+      <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+      <li><a href="testimonials.html" class="hover:text-primary transition-colors">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col bg-background-dark md:hidden text-white px-6 pb-4 space-y-2">
+    <a href="index.html" class="hover:text-primary block">Home</a>
+    <a href="about.html" class="hover:text-primary block">About</a>
+    <a href="offerings.html" class="hover:text-primary block">Offerings</a>
+    <a href="portfolio.html" class="hover:text-primary block">Portfolio</a>
+    <a href="testimonials.html" class="hover:text-primary block">Testimonials</a>
+    <a href="contact.html" class="hover:text-primary block">Contact</a>
+  </div>
+</header>
+
+
 <body class="bg-background-light dark:bg-background-dark font-display">
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <!-- Top App Bar -->
@@ -91,4 +124,11 @@
 </div>
 </main>
 </div>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 </body></html>
